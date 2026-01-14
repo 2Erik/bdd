@@ -1,0 +1,32 @@
+
+create table productos(
+	codigo int not null,
+	nombre varchar(50) not null,
+	descripcion varchar(200),
+	prescio money not null,
+	stock int not null,
+	constraint productos_pk primary key (codigo)
+)
+
+--Insertar Datos
+ 
+insert into productos(codigo, nombre, descripcion, prescio, stock)
+values (1, 'pera', 'verde', 0.30, 20)
+
+insert into productos(codigo, nombre, descripcion, prescio, stock)
+values (2, 'manzana', 'roja', 0.25, 10)
+
+insert into productos(codigo, nombre, descripcion, prescio, stock)
+values (3, 'arroz', 'sacos', 24.00, 5)
+
+insert into productos(codigo, nombre, descripcion, prescio, stock)
+values (4, 'atunes', 'paquetes', 2.30, 15)
+
+insert into productos(codigo, nombre, descripcion, prescio, stock)
+values (5, 'galletas', 'fundas', 1.00, 28)
+
+-- Selec
+
+select * from productos where nombre like 'q%'
+select * from productos where descripcion is null
+select * from productos where prescio between money(2) and money(3)
